@@ -1,0 +1,13 @@
+{
+  "name": "playwright-course",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nguyenhoai0302/playwright-course.git",
+  "author": "Hoai CV <nguyenhoaiqt32@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.18"
+  },
+  "scripts": {}
+}
