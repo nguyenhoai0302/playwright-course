@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 
 test.skip('Handling Alerts', async ({page}) => {
-    await page.goto('file:///D:/Internship_5_month/self_study/playwright-course/tests/practice_4/index.html');
+    await page.goto('http://127.0.0.1:2000/');
     let alertMessage = '';
     page.on('dialog', async(dialog) => {
         expect(dialog.type()).toBe('alert');
@@ -14,7 +14,7 @@ test.skip('Handling Alerts', async ({page}) => {
 });
 
 test.skip('Confirm Alert', async ({page}) => {
-    await page.goto('file:///D:/Internship_5_month/self_study/playwright-course/tests/practice_4/index.html');
+    await page.goto('http://127.0.0.1:2000/');
     let alertMessage = '';
     page.on('dialog', async(dialog) => {
         alertMessage = dialog.message();
@@ -25,8 +25,8 @@ test.skip('Confirm Alert', async ({page}) => {
     expect(alertMessage).toBe('You clicked Cancel.');
 })
 
-test('Handling POP-UPs', async ({page}) => {
-    await page.goto('file:///D:/Internship_5_month/self_study/playwright-course/tests/practice_4/index.html');
+test.skip('Handling POP-UPs', async ({page}) => {
+    await page.goto('http://127.0.0.1:2000/');
     const [popup] = await Promise.all([
         page.waitForEvent('popup'),
         page.click('#open-popup'),

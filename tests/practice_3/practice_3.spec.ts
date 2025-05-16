@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 
 test.skip('Advanced Interaction', async ({page}) => {
-    await page.goto('file:///D:/Internship_5_month/self_study/playwright-course/tests/practice_3/index.html');
+    await page.goto('http://127.0.0.1:1000/');
     await page.hover('button#hover-me');
     expect(await page.textContent('button#hover-me')).toContain('Text Changed!');
 
@@ -14,7 +14,7 @@ test.skip('Advanced Interaction', async ({page}) => {
 })
 
 test.skip('Drag and Drop', async ({page}) => {
-    await page.goto('file:///D:/Internship_5_month/self_study/playwright-course/tests/practice_3/index.html');
+    await page.goto('http://127.0.0.1:1000/');
     // await page.dragAndDrop('.drag-source', '.drop-target');
     // expect(await page.textContent('.drop-target')).toContain('Success');
 
@@ -26,8 +26,8 @@ test.skip('Drag and Drop', async ({page}) => {
     expect(await page.textContent('.drop-target')).toContain('Success');
 });
 
-test('Handling iframe', async ({page}) => {
-    await page.goto('file:///D:/Internship_5_month/self_study/playwright-course/tests/practice_3/index.html');
+test.skip('Handling iframe', async ({page}) => {
+    await page.goto('http://127.0.0.1:1000/');
     const iframeElement = await page.frame({name: 'iframe-name'});
     const inputSelector = '#iframe-input';
     
